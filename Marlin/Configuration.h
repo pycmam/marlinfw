@@ -497,10 +497,17 @@
   //#define PID_PARAMS_PER_HOTEND // Uses separate PID parameters for each extruder (useful for mismatched extruders)
                                   // Set/get with gcode: M301 E[extruder number, 0-2]
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
+
+  // Tuned for ZAV mini
+  #define DEFAULT_Kp 9.33
+  #define DEFAULT_Ki 0.46
+  #define DEFAULT_Kd 47.37
+
   // Ultimaker
-  #define DEFAULT_Kp 10.15
-  #define DEFAULT_Ki 0.56
-  #define DEFAULT_Kd 45.95
+  // #define DEFAULT_Kp 10.15
+  // #define DEFAULT_Ki 0.56
+  // #define DEFAULT_Kd 45.95
+
 
   // MakerGear
   //#define DEFAULT_Kp 7.0
@@ -794,7 +801,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 90 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 141 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1185,7 +1192,7 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR false
+#define INVERT_E0_DIR true
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
@@ -1229,7 +1236,7 @@
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
-#define Z_MAX_POS 100.1
+#define Z_MAX_POS 102.1
 
 /**
  * Software Endstops
